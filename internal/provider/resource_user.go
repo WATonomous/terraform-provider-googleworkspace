@@ -154,7 +154,6 @@ func resourceUser() *schema.Resource {
 				Type:             schema.TypeString,
 				Optional:         true,
 				Sensitive:        true,
-				ValidateDiagFunc: validation.ToDiagFunc(validation.StringLenBetween(8, 100)),
 			},
 			"hash_function": {
 				Description: "Stores the hash format of the password property. We recommend sending the password " +
